@@ -16,8 +16,9 @@
 # limitations under the License.
 ###############################################################################
 
-FROM openjdk:11-jre
-
+# FROM openjdk:11-jre
+FROM public.ecr.aws/docker/library/openjdk:11-jre
+ 
 # Install dependencies
 RUN set -ex; \
   apt-get update; \

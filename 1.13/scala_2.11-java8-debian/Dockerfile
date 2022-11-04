@@ -16,7 +16,8 @@
 # limitations under the License.
 ###############################################################################
 
-FROM openjdk:8-jre
+# FROM openjdk:8-jre
+FROM public.ecr.aws/docker/library/openjdk:8-jre
 
 # Install dependencies
 RUN set -ex; \
