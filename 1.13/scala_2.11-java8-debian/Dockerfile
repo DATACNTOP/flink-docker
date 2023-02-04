@@ -49,6 +49,7 @@ RUN set -ex; \
 #     FLINK_ASC_URL=https://www.apache.org/dist/flink/flink-1.13.6/flink-1.13.6-bin-scala_2.11.tgz.asc \
 #     GPG_KEY=CCFA852FD039380AB3EC36D08C3FB007FE60DEFA \
 #     CHECK_GPG=true
+
 ENV FLINK_TGZ_URL=https://archive.apache.org/dist/flink/flink-1.13.6/flink-1.13.6-bin-scala_2.11.tgz \
     FLINK_ASC_URL=https://archive.apache.org/dist/flink/flink-1.13.6/flink-1.13.6-bin-scala_2.11.tgz.asc \
     GPG_KEY=CCFA852FD039380AB3EC36D08C3FB007FE60DEFA \
@@ -84,6 +85,10 @@ RUN set -ex; \
   rm flink.tgz; \
   \
   chown -R flink:flink .;
+
+
+# Update flink-dist_2.11-1.13.6.jar
+COPY flink-dist_2.11-1.13.6-adapt.jar /opt/flink/lib/flink-dist_2.11-1.13.6.jar
 
 # Configure container
 COPY docker-entrypoint.sh /
