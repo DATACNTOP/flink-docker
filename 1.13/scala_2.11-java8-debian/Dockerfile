@@ -89,7 +89,7 @@ RUN set -ex; \
 
 
 # Update flink-dist_2.11-1.13.6.jar
-COPY flink-dist_2.11-1.13.6-adapt.jar /opt/flink/lib/flink-dist_2.11-1.13.6.jar
+#COPY flink-dist_2.11-1.13.6-adapt.jar /opt/flink/lib/flink-dist_2.11-1.13.6.jar
 
 # Configure container
 COPY docker-entrypoint.sh /
