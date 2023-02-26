@@ -84,7 +84,8 @@ RUN set -ex; \
   tar -xf flink.tgz --strip-components=1; \
   rm flink.tgz; \
   \
-  chown -R flink:flink .;
+  chown -R flink:flink .; \
+  ls -al;
 
 
 # Update flink-dist_2.11-1.13.6.jar
